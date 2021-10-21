@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Actualizar Vendedor</title>
+        <meta charset="UTF-8"> </meta>
+        <link rel="shortcut icon" type="text/css" href="https://img.icons8.com/external-kiranshastry-flat-kiranshastry/64/000000/external-screw-industry-kiranshastry-flat-kiranshastry.png" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"  crossorigin="anonymous"/>
+    </head>
+    <body>
+        <br>
+        <form th:action = "@{/actualizar/vendedor}" th:object="${vendedor}" method="post">
+            <div class="container">
+                <h1>Actualizar Vendedor </h1>
+                <div class="row g-2-center">
+                    <div class="col-md">
+                        <div class="form-floating">
+                            <input id = "codigovendedor" type="text"  class="form-control" placeholder="Codigo del Vendedor" value="" th:field ="*{codigoVendedor}"/>
+                            <label for="codigovendedor">Codigo del Vendedor</label>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="form-floating">
+                            <input id = "nombrevendedor" type="text" class="form-control" placeholder="Nombre del Vendedor" value="" th:field = "*{nombreVendedor}"/>  
+                            <label for="nombrevendedor">Nombre del Vendedor</label>
+                        </div>
+                    </div>
+
+
+                </div>
+                
+                    <div class="row g-2">
+                    <div class="col-md">
+                    <a th:href="@{/vendedores}" class="btn btn-outline-warning">Ver listado </a>
+                    </div>
+                    <div class="col-md">
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">                     
+                    <button type="submit" class="btn btn-success">Actualizar Vendedor</button>
+                    </div>
+                    </div>
+                </div>
+                    
+                    
+            </div>   
+            
+        </form>
+        
+        
+        
+    </body>
+</html>

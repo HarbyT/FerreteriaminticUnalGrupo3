@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Listado Vendedores</title>
+        <meta charset="UTF-8"> </meta>
+        
+    </head>
+    <body>
+        <h1>Forma para Actualizar de Vendedor</h1>
+        <form th:action = "@{/actualizar/vendedor}" th:object="${vendedor}" method="post">
+            <label> Código del Vendedor </label>
+            <input id = "codigovendedor" type="text" th:field ="*{codigoVendedor}"/>
+            <label> Nombre del Vendedor </label>
+            <input id = "nombrevendedor" type="text" th:field = "*{nombreVendedor}"/> <br/><br/>        
+            <br/> <br/>               
+            <button type = "submit">Actualizar vendedores</button>
+        </form>
+    </body>
+</html>

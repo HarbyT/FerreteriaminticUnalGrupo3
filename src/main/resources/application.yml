@@ -1,0 +1,21 @@
+server:
+    port: 8081
+spring:
+    thymeleaf:
+        prefix: file:src/main/resources/templates/
+    jpa:
+        database-platform: org.hibernate.dialect.PostgreSQLDialect
+        #database-platform: org.hibernate.dialect.MySQLDialect
+        open-in-view: false
+        hibernate:
+            ddl-auto: none  
+            #update para que traiga la base de datos y si no existen las tablas las crea
+    datasource:
+        driver-class-name: org.postgresql.Driver
+        #driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:postgresql://localhost:5432/postgres
+        #url: jdbc:mysql://localhost:3306/p_ventas
+        #username: postgres
+        #password: 19971231
+        username: postgres
+        password: Curso2021

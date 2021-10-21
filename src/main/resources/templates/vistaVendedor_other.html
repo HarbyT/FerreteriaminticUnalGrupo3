@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Listado Vendedores</title>
+        <meta charset="UTF-8"> </meta>
+        
+    </head>
+    <body>
+        <!--<div th:text="${vendedores}"></div>-->
+        <table>
+            <caption>Lista de Vendedores</caption>
+            <tr>
+                <th> Código      </th>
+                <th> Nombre      </th>
+            </tr>            
+            <tr th:each="vendedor: ${vendedores}">
+                <td th:text="${vendedor.codVendedor}" />
+                <td th:text="${vendedor.nombreVendedor}" />
+            </tr>
+        </table>
+        <a th:href="@{/productos}" class="btn btn-outline-warning">Ver lista productos</a>
+    </body>
+</html>
