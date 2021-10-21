@@ -13,9 +13,9 @@ spring:
     datasource:
         driver-class-name: org.postgresql.Driver
         #driver-class-name: com.mysql.cj.jdbc.Driver
-        url: jdbc:postgresql://localhost:5432/postgres
+        url: jdbc:postgresql://ec2-44-195-240-222.compute-1.amazonaws.com:5432/d6dvjr909e38d1
         #url: jdbc:mysql://localhost:3306/p_ventas
         #username: postgres
         #password: 19971231
-        username: postgres
-        password: Curso2021
+        username: cqaizmobhbdyzc
+        password: 4240a43ea69c0a770d7c46d287dcf0085db9f399a81369098a3c387dab2a258e
